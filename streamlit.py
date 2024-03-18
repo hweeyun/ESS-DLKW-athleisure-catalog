@@ -19,6 +19,8 @@ st.title("Zena Amazing Athleisure Catalog")
 cnx = st.connection("snowflake")
 session = cnx.session()
 
+st.stop()
+
 df = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.catalog_for_website")
 # st.dataframe(data=df, use_container_width=True)
 
