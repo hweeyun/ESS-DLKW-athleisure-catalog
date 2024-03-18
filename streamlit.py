@@ -2,6 +2,7 @@
 import streamlit as st
 from snowflake.snowpark.context import get_active_session
 import pandas as pd
+import snowflake.connector
 
 # Write directly to the app
 st.title("Zena Amazing Atheleisure Catalog")
