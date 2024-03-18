@@ -34,7 +34,7 @@ color_list = pd_df['COLOR_OR_STYLE']
 color_or_style = st.selectbox('Pick a sweatsuit color or style: ', color_list)
 
 image = pd_df[pd_df['COLOR_OR_STYLE']==color_or_style]['DIRECT_URL'].iloc[0]
-st.image(image, caption ='Our warm, comfortable, '+ color_or_style + ' sweatsuit!')
+st.image(image, width=400, caption ='Our warm, comfortable, '+ color_or_style + ' sweatsuit!')
 
 
 price = pd_df[pd_df['COLOR_OR_STYLE']==color_or_style]['PRICE'].iloc[0]
