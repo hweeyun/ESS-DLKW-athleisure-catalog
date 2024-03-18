@@ -16,8 +16,11 @@ st.title("Zena Amazing Athleisure Catalog")
 # st.text(my_data_row)
 
 # Get the current credentials
-cnx = snowflake.connector.connect(**st.secrets["snowflake"])
-session = cnx.cursor()
+# cnx = snowflake.connector.connect(**st.secrets["snowflake"])
+# session = cnx.cursor()
+
+cnx = st.connection("snowflake")
+session = cnx.session()
 
 st.stop()
 
