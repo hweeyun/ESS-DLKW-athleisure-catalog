@@ -7,6 +7,8 @@ import snowflake.connector
 # Write directly to the app
 st.title("Zena Amazing Athleisure Catalog")
 
+st.stop()
+
 # Get the current credentials
 cnx = st.connection("snowflake")
 session = cnx.session()
