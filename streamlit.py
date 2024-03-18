@@ -5,10 +5,11 @@ import pandas as pd
 import snowflake.connector
 
 # Write directly to the app
-st.title("Zena Amazing Atheleisure Catalog")
+st.title("Zena Amazing Athleisure Catalog")
 
 # Get the current credentials
-session = get_active_session()
+cnx = st.connection("snowflake")
+session = cnx.session()
 
 df = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.catalog_for_website")
 # st.dataframe(data=df, use_container_width=True)
